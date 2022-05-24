@@ -44,7 +44,7 @@ def makeImg(qq,group,time,n):
     URL = 'http://qlogo.store.qq.com/qzone/'+qq+'/'+qq+'/100'
     with urllib.request.urlopen(URL) as url:
         f = io.BytesIO(url.read())
-    ico = Image.open(f)
+    ico = Image.open(f).convert('RGBA')
     img_cp = img.copy()
     position = ((30),(105))
     img_cp.paste(ico,position,ico)
@@ -109,3 +109,6 @@ def main(bot):
                         await bot.send(event,"你今天已经在本群签过到了！")
                     elif group!=nbINFO[0]:
                         await bot.send(event,"你今天已经在其他群签过到了！")
+
+
+
