@@ -1,6 +1,6 @@
 # yiri_mirai_qiandao
-## 1.安装YiriMiral
 ![图片](https://user-images.githubusercontent.com/80308986/169965484-3d1cf650-45c9-4e45-a61c-dda9fd0d49e3.png)
+## 1.安装YiriMiral
 
 pip install yiri-mirai
 
