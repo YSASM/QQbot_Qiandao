@@ -1,3 +1,4 @@
+from cmath import e
 from datetime import datetime
 from functools import reduce
 from mirai import GroupMessage
@@ -79,7 +80,11 @@ def main(bot):
                 listAll.append(nbINFO)
                 writeTXT()
             else :
-                ltime = toint(nbINFO[3])
+                ltime=0
+                try:
+                    ltime = toint(nbINFO[3])
+                except TypeError:
+                    ltime = nbINFO[3]
                 if time - ltime == 1:
                     nbINFO[2] = str(toint(nbINFO[2])+1)
                     nbINFO[3]=str(time)
